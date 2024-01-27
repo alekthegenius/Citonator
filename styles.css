@@ -3,7 +3,6 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    perspective: 1000px;
 }
 
 h1 {
@@ -54,7 +53,7 @@ h1 {
 
 form {
     max-width: 600px;
-    width: 100%;
+    width: 80%;
     margin: 30px auto;
     border: 1px solid #ccc;
     padding: 20px;
@@ -77,7 +76,6 @@ textarea, input[type="date"] {
 
 textarea {
     resize: none;
-
 }
 
 button {
