@@ -5,6 +5,24 @@
     </head>
     <body>
         <h1>Citonator-Create Citations for your STOA Briefs!</h1>
+        <div id="toolbar">
+            <div class="dropdown">
+                <button class="toolbar_button" id="font-settings">Font Settings</button>
+                <div class="dropdown-content">
+                    <button href="#">Times New Romans</button>
+                    <button href="#">Arial</button>
+                    <button href="#">Sans</button>
+                  </div>
+            </div>
+            <div class="dropdown">
+                <button id="search-engine">Search Engine</button>
+                <div class="dropdown-content">
+                    <button onclick="var search_engine='Duckduckgo'">Duckduckgo</button>
+                    <button onclick="var search_engine='Google'">Google</button>
+                    <button onclick="var search_engine='Squawkrates'">Squawkrates</button>
+                  </div>
+            </div>
+        </div>
         <form id="citation_form" onsubmit="generateCitation();return false;">
             <h3 id="authorHead">Author(s):</h3>
             <textarea id="author" name="author"></textarea>
@@ -17,9 +35,9 @@
             <h3 id="daccessedHead">Date Accessed</h3>
             <input type="date" id="daccessed" name="daccessed"><button id="accesstoday" onclick="setDate()">Today</button></textarea>
             <h3 id="authorcredsHead">Author Credentials</h3>
-            <textarea id="authorcreds" name="authorcreds"></textarea><button id="authorsearch" onclick="openLink('https://squawkrates.vercel.app/?query=' + document.getElementById('author').value.replaceAll(' ', '+'))">Search</button>
+            <textarea id="authorcreds" name="authorcreds"></textarea><button id="authorsearch" onclick="openLink(search_engine, 'author')">Search</button>
             <h3 id="orgcredsHead">Organization Credentials</h3>
-            <textarea id="orgcreds" name="orgcreds"></textarea><button id="orgsearch" onclick="openLink('https://squawkrates.vercel.app/?query=' + document.getElementById('organization').value.replaceAll(' ', '+'))">Search</button>
+            <textarea id="orgcreds" name="orgcreds"></textarea><button id="orgsearch" onclick="openLink(search_engine, 'organization')">Search</button>
             <h3 id="articletitleHead">Article Title</h3>
             <textarea id="articletitle" name="aticletitle"></textarea>
             <h3 id="linkHead">Link</h3>
@@ -33,12 +51,12 @@
             <span id="organizationtext"></span>
             <span id="dpublish_text"></span>
             <span id="dupdated_text"></span>
-            <span id="daccessed_text"></span>
-            <span id="authorcreds_text"></span>
-            <span id="orgcreds_text"></span>
-            <span id="articletitle_text"></span>
-            <span id="link_text"></span>
-            <span id="evidence_text"></span>
+            <span id="daccessed_text" style="font-style: italic;"></span>
+            <span id="authorcreds_text" style="font-style: italic;"></span>
+            <span id="orgcreds_text" style="font-style: italic;"></span>
+            <span id="articletitle_text" style="font-style: italic;"></span>
+            <span id="link_text" style="font-style: italic;"></span>
+            <span id="evidence_text" style="text-decoration-line: underline;"></span>
         </div>
         <script src="js/main.js"></script>
     </body>

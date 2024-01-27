@@ -21,6 +21,13 @@ var articletitle_text = document.getElementById('articletitle_text');
 var link_text = document.getElementById('link_text');
 var evidence_text = document.getElementById('evidence_text');
 
+var search_engine = "Squawkrates"
+
+var search_dict = {};
+search_dict["Google"] = "https://www.google.com/search?q=";
+search_dict["Duckduckgo"] = "https://duckduckgo.com/?va=h&t=hy&q=";
+search_dict["Squawkrates"] = "https://squawkrates.vercel.app/?query=";
+
 function generateCitation() {
     authortext.textContent = author.value;
     organizationtext.textContent = organization.value;
@@ -42,20 +49,21 @@ function generateCitation() {
         daccessed_text.textContent = "";
     }
 
-    authorcreds_text.textContent = authorcreds.value;
-    orgcreds_text.textContent = orgcreds.value;
+    authorcreds_text.textContent = "(" + authorcreds.value + ")";
+    orgcreds_text.textContent = "(" + orgcreds.value + ")";
     articletitle_text.textContent = articletitle.value;
     link_text.textContent = link.value;
-    evidence_text = evidence.value;
+    evidence_text.textContent = evidence.value;
 }
 
 function setDate() {
     daccessed.value = new Date().toISOString().split('T')[0];
 }
 
-function openLink(url) {
-    if (url != '') {
-        window.open(url);
+function openLink(search_engine, id) {
+    url = search_dict[search_engine]
+    if (document.getElementById(id).value != '') {
+        window.open(url + document.getElementById(id).value.replaceAll(' ', '+'));
     }
     
 }
