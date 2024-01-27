@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Citonator</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Citonator-Create Citations for your STOA Briefs!</h1>
+        <form id="citation_form" onsubmit="generateCitation();return false;">
+            <h3 id="authorHead">Author(s):</h3>
+            <textarea id="author" name="author"></textarea>
+            <h3 >Organization Name:</h3>
+            <textarea id="organization" name="organization"></textarea>
+            <h3 id="dpublishHead">Date Published:</h3>
+            <input type="date" id="dpublish" name="dpublish"></textarea>
+            <h3 id="dupdatedHead">(Date Last Updated)</h3>
+            <input type="date" id="dupdated" name="dupdated"></textarea>
+            <h3 id="daccessedHead">Date Accessed</h3>
+            <input type="date" id="daccessed" name="daccessed"><button id="accesstoday">Today</button></textarea>
+            <h3 id="authorcredsHead">Author Credentials</h3>
+            <textarea id="authorcreds" name="authorcreds"></textarea><button id="authorsearch">Search</button>
+            <h3 id="orgcredsHead">Organization Credentials</h3>
+            <textarea id="orgcreds" name="orgcreds"></textarea><button id="orgsearch">Search</button>
+            <h3 id="articletitleHead">Article Title</h3>
+            <textarea id="articletitle" name="aticletitle"></textarea>
+            <h3 id="linkHead">Link</h3>
+            <textarea id="link" name="link"></textarea>
+            <h3 id="evidenceHead">Evidence</h3>
+            <textarea id="evidence" name="evidence"></textarea>
+            <input type="submit" value="Generate">
+        </form>
+        <div id="generated_text">
+            <span id="authortext"></span>
+            <span id="organizationtext"></span>
+            <span id="dpublish_text"></span>
+            <span id="dupdated_text"></span>
+            <span id="daccessed_text"></span>
+            <span id="authorcreds_text"></span>
+            <span id="orgcreds_text"></span>
+            <span id="articletitle_text"></span>
+            <span id="link_text"></span>
+            <span id="evidence_text"></span>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
