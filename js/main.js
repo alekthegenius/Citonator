@@ -48,3 +48,14 @@ function generateCitation() {
     link_text.textContent = link.value;
     evidence_text = evidence.value;
 }
+
+function setDate() {
+    daccessed.value = new Date().toISOString().split('T')[0];
+}
+
+function openLink(url) {
+    if (url != '') {
+        window.open(url);
+    }
+    
+}

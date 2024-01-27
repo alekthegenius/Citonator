@@ -15,11 +15,11 @@
             <h3 id="dupdatedHead">(Date Last Updated)</h3>
             <input type="date" id="dupdated" name="dupdated"></textarea>
             <h3 id="daccessedHead">Date Accessed</h3>
-            <input type="date" id="daccessed" name="daccessed"><button id="accesstoday">Today</button></textarea>
+            <input type="date" id="daccessed" name="daccessed"><button id="accesstoday" onclick="setDate()">Today</button></textarea>
             <h3 id="authorcredsHead">Author Credentials</h3>
-            <textarea id="authorcreds" name="authorcreds"></textarea><button id="authorsearch">Search</button>
+            <textarea id="authorcreds" name="authorcreds"></textarea><button id="authorsearch" onclick="openLink('https://squawkrates.vercel.app/?query=' + document.getElementById('author').value.replaceAll(' ', '+'))">Search</button>
             <h3 id="orgcredsHead">Organization Credentials</h3>
-            <textarea id="orgcreds" name="orgcreds"></textarea><button id="orgsearch">Search</button>
+            <textarea id="orgcreds" name="orgcreds"></textarea><button id="orgsearch" onclick="openLink('https://squawkrates.vercel.app/?query=' + document.getElementById('organization').value.replaceAll(' ', '+'))">Search</button>
             <h3 id="articletitleHead">Article Title</h3>
             <textarea id="articletitle" name="aticletitle"></textarea>
             <h3 id="linkHead">Link</h3>
