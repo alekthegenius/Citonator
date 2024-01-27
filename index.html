@@ -8,11 +8,20 @@
         <h1>Citonator-Create Citations for your STOA Briefs!</h1>
         <div id="toolbar">
             <div class="dropdown">
-                <button class="toolbar_button" id="font-settings">Font Settings</button>
+                <button class="toolbar_button" id="font-settings">Font Size</button>
                 <div class="dropdown-content">
-                    <button href="#">Times New Romans</button>
-                    <button href="#">Arial</button>
-                    <button href="#">Sans</button>
+                    <form oninput="changeSize(document.getElementById('fonsize').value)" id="fontSize_selector">
+                        <input id="fonsize" type="number" min="1" max="100">
+                    </form>
+                  </div>
+            </div>
+            <div class="dropdown">
+                <button class="toolbar_button" id="font-settings">Font</button>
+                <div class="dropdown-content">
+                    <button onclick="changeFont('Times')">Times New Romans</button>
+                    <button onclick="changeFont('Arial')">Arial</button>
+                    <button onclick="changeFont('Sans')">Sans</button>
+                    <button onclick="changeFont('Courier')">Courier</button>
                   </div>
             </div>
             <div class="dropdown">
@@ -26,9 +35,9 @@
         </div>
         <form id="citation_form" onsubmit="generateCitation();return false;">
             <h3 id="authorHead">Author(s):</h3>
-            <textarea id="author" name="author"></textarea>
+            <textarea class="inputfield" id="author" name="author"></textarea>
             <h3 >Organization Name:</h3>
-            <textarea id="organization" name="organization"></textarea>
+            <textarea class="inputfield" id="organization" name="organization"></textarea>
             <h3 id="dpublishHead">Date Published:</h3>
             <input type="date" id="dpublish" name="dpublish"></textarea>
             <h3 id="dupdatedHead">(Date Last Updated)</h3>
@@ -36,15 +45,15 @@
             <h3 id="daccessedHead">Date Accessed</h3>
             <input type="date" id="daccessed" name="daccessed"><button id="accesstoday" onclick="setDate()">Today</button></textarea>
             <h3 id="authorcredsHead">Author Credentials</h3>
-            <textarea id="authorcreds" name="authorcreds"></textarea><button id="authorsearch" onclick="openLink(search_engine, 'author')">Search</button>
+            <textarea class="inputfield" id="authorcreds" name="authorcreds"></textarea><button id="authorsearch" onclick="openLink(search_engine, 'author')">Search</button>
             <h3 id="orgcredsHead">Organization Credentials</h3>
-            <textarea id="orgcreds" name="orgcreds"></textarea><button id="orgsearch" onclick="openLink(search_engine, 'organization')">Search</button>
+            <textarea class="inputfield" id="orgcreds" name="orgcreds"></textarea><button id="orgsearch" onclick="openLink(search_engine, 'organization')">Search</button>
             <h3 id="articletitleHead">Article Title</h3>
-            <textarea id="articletitle" name="aticletitle"></textarea>
+            <textarea class="inputfield" id="articletitle" name="aticletitle"></textarea>
             <h3 id="linkHead">Link</h3>
-            <textarea id="link" name="link"></textarea>
+            <textarea class="inputfield" id="link" name="link"></textarea>
             <h3 id="evidenceHead">Evidence</h3>
-            <textarea id="evidence" name="evidence"></textarea>
+            <textarea class="inputfield" id="evidence" name="evidence"></textarea>
             <input type="submit" value="Generate">
         </form>
         <div id="generated_text">

@@ -60,6 +60,14 @@ function setDate() {
     daccessed.value = new Date().toISOString().split('T')[0];
 }
 
+function changeFont(font) {
+    document.getElementById("generated_text").style.fontFamily = font
+}
+
+function changeSize(size) {
+    document.getElementById("generated_text").style.fontSize = size
+}
+
 function openLink(search_engine, id) {
     url = search_dict[search_engine]
     if (document.getElementById(id).value != '') {
