@@ -3,6 +3,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -17,15 +18,13 @@ h1 {
 }
 
 #toolbar {
+    margin: 10px auto 0px;
+    background-color: #f1f1f1;
     width: 100vw;
-    margin-top: 20px;
     min-height: 35px;
     height: fit-content;
-    padding: 10px;
     border: 1px solid #ccc;
     text-align: center;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 
@@ -64,17 +63,12 @@ h1 {
 }
 
 #citation_form {
-    margin-top: 30px;
     max-width: 600px;
-    width: 100vw;
+    margin: 10px auto 0px;
+    width: 100%;
     border: 1px solid #ccc;
-    padding: 20px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    display: inline-block;
-}
-
-#formwrapper {
     text-align: center;
 }
 
@@ -84,7 +78,7 @@ h3 {
 }
 
 textarea, input[type="date"] {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -124,10 +118,9 @@ input[type="submit"]:hover {
 }
 
 #generated_text {
-    width: 100vw;
+    width: 100%;
     margin-top: 20px;
     height: 200px;
-    padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }

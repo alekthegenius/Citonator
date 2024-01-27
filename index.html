@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>Citonator-Create Citations for your STOA Briefs!</h1>
+        <div class="title-text">
+            <h1>Citonator-Create Citations for your STOA Briefs!</h1>
+        </div>
         <div id="toolbar">
             <div class="dropdown">
                 <button class="toolbar_button" id="font-settings">Font Size</button>
@@ -41,33 +43,31 @@
                   </div>
             </div>
         </div>
-        <div id="formWrapper">
-            <form id="citation_form" onsubmit="generateCitation();return false;">
-                <h3 id="authorHead">Author(s):</h3>
-                <textarea class="inputfield" id="author" name="author"></textarea>
-                <h3 >Organization Name:</h3>
-                <textarea class="inputfield" id="organization" name="organization"></textarea>
-                <h3 id="dpublishHead">Date Published:</h3>
-                <input type="date" id="dpublish" name="dpublish"></textarea>
-                <h3 id="dupdatedHead">(Date Last Updated)</h3>
-                <input type="date" id="dupdated" name="dupdated"></textarea>
-                <h3 id="daccessedHead">Date Accessed</h3>
-                <input type="date" id="daccessed" name="daccessed"><button id="accesstoday" onclick="setDate()">Today</button></textarea>
-                <h3 id="authorcredsHead">Author Credentials</h3>
-                <textarea class="inputfield" id="authorcreds" name="authorcreds"></textarea><br>
-                <button id="authorsearch" onclick="openLink(search_engine, 'author')">Search</button>
-                <h3 id="orgcredsHead">Organization Credentials</h3>
-                <textarea class="inputfield" id="orgcreds" name="orgcreds"></textarea><br>
-                <button id="orgsearch" onclick="openLink(search_engine, 'organization')">Search</button>
-                <h3 id="articletitleHead">Article Title</h3>
-                <textarea class="inputfield" id="articletitle" name="aticletitle"></textarea>
-                <h3 id="linkHead">Link</h3>
-                <textarea class="inputfield" id="link" name="link"></textarea>
-                <h3 id="evidenceHead">Evidence</h3>
-                <textarea class="inputfield" id="evidence" name="evidence"></textarea>
-                <input type="submit" value="Generate">
-            </form>
-        </div>
+        <form id="citation_form" onsubmit="generateCitation();return false;">
+            <h3 id="authorHead">Author(s):</h3>
+            <textarea class="inputfield" id="author" name="author"></textarea>
+            <h3 >Organization Name:</h3>
+            <textarea class="inputfield" id="organization" name="organization"></textarea>
+            <h3 id="dpublishHead">Date Published:</h3>
+            <input type="date" id="dpublish" name="dpublish"></textarea>
+            <h3 id="dupdatedHead">(Date Last Updated)</h3>
+            <input type="date" id="dupdated" name="dupdated"></textarea>
+            <h3 id="daccessedHead">Date Accessed</h3>
+            <input type="date" id="daccessed" name="daccessed"><button id="accesstoday" onclick="setDate()">Today</button></textarea>
+            <h3 id="authorcredsHead">Author Credentials</h3>
+            <textarea class="inputfield" id="authorcreds" name="authorcreds"></textarea><br>
+            <button id="authorsearch" onclick="openLink(search_engine, 'author')">Search</button>
+            <h3 id="orgcredsHead">Organization Credentials</h3>
+            <textarea class="inputfield" id="orgcreds" name="orgcreds"></textarea><br>
+            <button id="orgsearch" onclick="openLink(search_engine, 'organization')">Search</button>
+            <h3 id="articletitleHead">Article Title</h3>
+            <textarea class="inputfield" id="articletitle" name="aticletitle"></textarea>
+            <h3 id="linkHead">Link</h3>
+            <textarea class="inputfield" id="link" name="link"></textarea>
+            <h3 id="evidenceHead">Evidence</h3>
+            <textarea class="inputfield" id="evidence" name="evidence"></textarea>
+            <input type="submit" value="Generate">
+        </form>
         <div id="generated_text">
             <span id="authortext" style="text-decoration-line: underline;"></span>
             <span id="organizationtext" style="text-decoration-line: underline;"></span>
