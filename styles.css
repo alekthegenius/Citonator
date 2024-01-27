@@ -17,13 +17,15 @@ h1 {
 }
 
 #toolbar {
-    width: 100%;
+    width: 100vw;
     margin-top: 20px;
     min-height: 35px;
     height: fit-content;
     padding: 10px;
     border: 1px solid #ccc;
     text-align: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 
@@ -62,13 +64,18 @@ h1 {
 }
 
 #citation_form {
+    margin-top: 30px;
     max-width: 600px;
-    width: 80%;
-    margin: 30px auto;
+    width: 100vw;
     border: 1px solid #ccc;
     padding: 20px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    display: inline-block;
+}
+
+#formwrapper {
+    text-align: center;
 }
 
 h3 {
@@ -117,7 +124,7 @@ input[type="submit"]:hover {
 }
 
 #generated_text {
-    width: 100%;
+    width: auto;
     margin-top: 20px;
     height: 200px;
     padding: 10px;
