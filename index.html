@@ -10,8 +10,16 @@
             <div class="dropdown">
                 <button class="toolbar_button" id="font-settings">Font Size</button>
                 <div class="dropdown-content">
-                    <form oninput="changeSize(document.getElementById('fonsize').value)" id="fontSize_selector">
-                        <input id="fonsize" type="number" min="1" max="100">
+                    <form oninput="changeSize(document.getElementById('fontsize').value)" onsubmit="return false;" id="fontSize_selector">
+                        <input id="fontsize" type="number" min="1" max="100">
+                    </form>
+                  </div>
+            </div>
+            <div class="dropdown">
+                <button class="toolbar_button" id="font-settings">Evidence Font Size</button>
+                <div class="dropdown-content">
+                    <form oninput="changeEvidenceSize(document.getElementById('evidencesize').value)" onsubmit="return false;" id="fontSize_selector">
+                        <input id="evidencesize" type="number" min="1" max="100">
                     </form>
                   </div>
             </div>
@@ -65,7 +73,8 @@
             <span id="authorcreds_text" style="font-style: italic;"></span>
             <span id="orgcreds_text" style="font-style: italic;"></span>
             <span id="articletitle_text" style="font-style: italic;"></span>
-            <span id="link_text" style="font-style: italic;"></span><br>
+            <span id="link_text" style="font-style: italic;"></span>
+            <br><br>
             <span id="evidence_text" style="text-decoration-line: underline;"></span>
         </div>
         <script src="js/main.js"></script>

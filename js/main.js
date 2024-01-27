@@ -28,6 +28,9 @@ search_dict["Google"] = "https://www.google.com/search?q=";
 search_dict["Duckduckgo"] = "https://duckduckgo.com/?va=h&t=hy&q=";
 search_dict["Squawkrates"] = "https://squawkrates.vercel.app/?query=";
 
+changeSize(11)
+changeEvidenceSize(12)
+
 function generateCitation() {
     authortext.textContent = author.value;
     organizationtext.textContent = organization.value;
@@ -65,7 +68,19 @@ function changeFont(font) {
 }
 
 function changeSize(size) {
-    document.getElementById("generated_text").style.fontSize = size
+    authortext.style.fontSize = size
+    organizationtext.style.fontSize = size
+    dpublish_text.style.fontSize = size
+    dupdated_text.style.fontSize = size
+    daccessed_text.style.fontSize = size
+    authorcreds_text.style.fontSize = size
+    orgcreds_text.style.fontSize = size
+    articletitle_text.style.fontSize = size
+    link_text.style.fontSize = size
+}
+
+function changeEvidenceSize(size) {
+    document.getElementById("evidence_text").style.fontSize = size
 }
 
 function openLink(search_engine, id) {

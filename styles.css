@@ -11,10 +11,16 @@ h1 {
     margin-top: 15px;
 }
 
+.toolbar_button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 #toolbar {
     width: 100%;
     margin-top: 20px;
-    height: 35px;
+    min-height: 35px;
+    height: fit-content;
     padding: 10px;
     border: 1px solid #ccc;
     text-align: center;
