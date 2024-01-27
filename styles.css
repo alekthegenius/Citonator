@@ -12,6 +12,14 @@ h1 {
     margin-top: 15px;
 }
 
+.title-text {
+    padding: 5px;
+    box-sizing:border-box;  /** add this **/
+    -moz-box-sizing:border-box; /** add this **/
+    -webkit-box-sizing:border-box; /** add this **/
+    -ms-box-sizing:border-box; /** add this **/
+}
+
 .toolbar_button {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -20,7 +28,7 @@ h1 {
 #toolbar {
     margin: 10px auto 0px;
     background-color: #f1f1f1;
-    width: 100vw;
+    width: 100%;
     min-height: 35px;
     height: fit-content;
     border: 1px solid #ccc;
@@ -124,8 +132,12 @@ input[type="submit"]:hover {
     width: 100%;
     margin-top: 20px;
     height: 200px;
-    border-radius: 5px;
     border: 1px solid #ccc;
+    padding: 5px;
+    box-sizing:border-box;  /** add this **/
+    -moz-box-sizing:border-box; /** add this **/
+    -webkit-box-sizing:border-box; /** add this **/
+    -ms-box-sizing:border-box; /** add this **/
 }
 
 #italic {
