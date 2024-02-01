@@ -83,6 +83,10 @@ function changeEvidenceSize(size) {
     document.getElementById("evidence_text").style.fontSize = size
 }
 
+function searchEngine(engine) {
+    var search_engine = engine
+}
+
 function openLink(search_engine, id) {
     url = search_dict[search_engine]
     if (document.getElementById(id).value != '') {
